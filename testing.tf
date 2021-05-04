@@ -2,7 +2,7 @@ resource "aws_cloudformation_stack" "network" {
   name = "networking-stack"
 
   parameters = {
-    VPCCidr = "10.0.0.0/16"
+    VPCCidr = "100.0.0.0/24"
   }
 
   template_body = <<STACK
@@ -11,7 +11,7 @@ resource "aws_cloudformation_stack" "network" {
     "VPCCidr" : {
       "Type" : "String",
       "Default" : "100.0.0.0/24",
-      "Description" : "Enter the CIDR block for the VPC. Default is 10.0.0.0/16."
+      "Description" : "Enter the CIDR block for the VPC. Default is 100.0.0.0/24."
     }
   },
   "Resources" : {
