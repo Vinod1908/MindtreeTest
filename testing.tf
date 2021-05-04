@@ -10,8 +10,8 @@ resource "aws_cloudformation_stack" "network" {
   "Parameters" : {
     "VPCCidr" : {
       "Type" : "String",
-      "Default" : "100.0.0.0/24",
-      "Description" : "Enter the CIDR block for the VPC. Default is 100.0.0.0/24."
+      "Default" : "10.0.0.0/16",
+      "Description" : "Enter the CIDR block for the VPC. Default is 10.0.0.0/16."
     }
   },
   "Resources" : {
